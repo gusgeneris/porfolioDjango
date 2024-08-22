@@ -23,7 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8(rb+lleojoh7vp=tpi*kgksz!(cn+d+7pmu!*70zol+%c(-5%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+
 
 ALLOWED_HOSTS = []
 
@@ -73,14 +75,25 @@ WSGI_APPLICATION = 'porfolioDjango.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'railway',
+#         'USER': 'root',
+#         'PASSWORD': 'a155Ff5gfA5dFeA-E5--Gfgaa24eHa65',
+#         'HOST': 'viaduct.proxy.rlwy.net',
+#         'PORT': 57839,
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'railway',
-        'USER': 'root',
-        'PASSWORD': 'a155Ff5gfA5dFeA-E5--Gfgaa24eHa65',
-        'HOST': 'viaduct.proxy.rlwy.net',
-        'PORT': 57839,
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '11407361',  # Deja esto en blanco si no has configurado una contraseña específica
+        'HOST': 'localhost',      # Deja esto en blanco para utilizar el localhost
+        'PORT': '',      # Deja esto en blanco para utilizar el puerto predeterminado
     }
 }
 
